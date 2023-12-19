@@ -1,4 +1,4 @@
-package me.lackinger.catalogservice.domain;
+package com.polarbookshop.catalogservice.domain;
 
 import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.data.jdbc.repository.query.Query;
@@ -9,13 +9,13 @@ import java.util.Optional;
 
 public interface BookRepository extends CrudRepository<Book, Long> {
 
-    Optional<Book> findByIsbn(String isbn);
+	Optional<Book> findByIsbn(String isbn);
 
-    boolean existsByIsbn(String isbn);
+	boolean existsByIsbn(String isbn);
 
-    @Modifying
-    @Transactional
-    @Query("delete from Book where isbn = :isbn")
-    void deleteByIsbn(String isbn);
+	@Modifying
+	@Transactional
+	@Query("delete from Book where isbn = :isbn")
+	void deleteByIsbn(String isbn);
 
 }

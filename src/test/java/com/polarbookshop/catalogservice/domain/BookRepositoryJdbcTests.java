@@ -1,9 +1,8 @@
-package me.lackinger.catalogservice.domain;
+package com.polarbookshop.catalogservice.domain;
 
-import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import me.lackinger.catalogservice.config.DataConfig;
+import com.polarbookshop.catalogservice.config.DataConfig;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
@@ -13,6 +12,7 @@ import org.springframework.data.jdbc.core.JdbcAggregateTemplate;
 import org.springframework.test.context.ActiveProfiles;
 
 import java.util.Optional;
+import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 @DataJdbcTest
@@ -38,7 +38,7 @@ class BookRepositoryJdbcTests {
 
 		assertThat(StreamSupport.stream(actualBooks.spliterator(), true)
 		                        .filter(book -> book.isbn().equals(book1.isbn()) || book.isbn().equals(book2.isbn()))
-		                        .collect(toList())).hasSize(2);
+		                        .collect(Collectors.toList())).hasSize(2);
 	}
 
 	@Test
