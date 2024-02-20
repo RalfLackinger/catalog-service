@@ -1,4 +1,4 @@
-package com.polarbookshop.catalogservice.domain;
+package me.lackinger.catalogservice.domain;
 
 public class BookNotFoundException extends RuntimeException {
 

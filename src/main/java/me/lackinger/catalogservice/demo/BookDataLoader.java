@@ -1,7 +1,7 @@
-package com.polarbookshop.catalogservice.demo;
+package me.lackinger.catalogservice.demo;
 
-import com.polarbookshop.catalogservice.domain.Book;
-import com.polarbookshop.catalogservice.domain.BookRepository;
+import me.lackinger.catalogservice.domain.Book;
+import me.lackinger.catalogservice.domain.BookRepository;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.EventListener;

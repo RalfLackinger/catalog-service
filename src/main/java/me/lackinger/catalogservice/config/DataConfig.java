@@ -1,4 +1,4 @@
-package com.polarbookshop.catalogservice.config;
+package me.lackinger.catalogservice.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jdbc.repository.config.EnableJdbcAuditing;

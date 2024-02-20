@@ -1,7 +1,7 @@
-package com.polarbookshop.catalogservice.web;
+package me.lackinger.catalogservice.web;
 
-import com.polarbookshop.catalogservice.domain.Book;
-import com.polarbookshop.catalogservice.domain.BookService;
+import me.lackinger.catalogservice.domain.Book;
+import me.lackinger.catalogservice.domain.BookService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

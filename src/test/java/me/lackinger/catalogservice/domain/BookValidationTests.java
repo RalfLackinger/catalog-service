@@ -1,4 +1,4 @@
-package com.polarbookshop.catalogservice.domain;
+package me.lackinger.catalogservice.domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

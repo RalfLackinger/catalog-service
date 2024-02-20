@@ -1,7 +1,7 @@
-package com.polarbookshop.catalogservice.web;
+package me.lackinger.catalogservice.web;
 
-import com.polarbookshop.catalogservice.domain.BookAlreadyExistsException;
-import com.polarbookshop.catalogservice.domain.BookNotFoundException;
+import me.lackinger.catalogservice.domain.BookAlreadyExistsException;
+import me.lackinger.catalogservice.domain.BookNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
