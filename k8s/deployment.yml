@@ -5,6 +5,7 @@ metadata:
   labels:
     app: catalog-service
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: catalog-service
@@ -26,6 +27,8 @@ spec:
           env:
             - name: BPL_JVM_THREAD_COUNT
               value: "50"
+            - name: SPRING_CLOUD_CONFIG_URI
+              value: http://config-service
             - name: SPRING_DATASOURCE_URL
               value: jdbc:postgresql://polar-postgres:5443/polardb_catalog
             - name: SPRING_PROFILES_ACTIVE
