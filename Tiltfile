@@ -1,4 +1,4 @@
-#Build
+# Build
 custom_build(
     # Name of the container image
     ref = 'catalog-service',
