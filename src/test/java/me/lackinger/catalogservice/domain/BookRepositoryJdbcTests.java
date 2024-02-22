@@ -3,7 +3,6 @@ package me.lackinger.catalogservice.domain;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import me.lackinger.catalogservice.config.DataConfig;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
@@ -50,14 +49,14 @@ class BookRepositoryJdbcTests {
 
 		Optional<Book> actualBook = bookRepository.findByIsbn(bookIsbn);
 
-		Assertions.assertThat(actualBook).isPresent();
+		assertThat(actualBook).isPresent();
 		assertThat(actualBook.get().isbn()).isEqualTo(book.isbn());
 	}
 
 	@Test
 	void findBookByIsbnWhenNotExisting() {
 		Optional<Book> actualBook = bookRepository.findByIsbn("1234561238");
-		Assertions.assertThat(actualBook).isEmpty();
+		assertThat(actualBook).isEmpty();
 	}
 
 	@Test
